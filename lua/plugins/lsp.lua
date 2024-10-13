@@ -162,32 +162,37 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      tsserver = {},
-      ruff = {},
-      pylsp = {
-        settings = {
-          pylsp = {
-            plugins = {
-              pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-              autopep8 = { enabled = false },
-              yapf = { enabled = false },
-              mccabe = { enabled = false },
-              pylsp_mypy = { enabled = false },
-              pylsp_black = { enabled = false },
-              pylsp_isort = { enabled = false },
-            },
-          },
-        },
-      },
+      -- tsserver = {},
+      -- ruff = {
+      -- init_options = {
+      -- settings = {
+      -- Any extra CLI arguments for `ruff` go here.
+      -- args = {},
+      -- },
+      -- },
+      -- },
+      -- pylsp = {
+      --   settings = {
+      --     pylsp = {
+      --       plugins = {
+      --         pyflakes = { enabled = false },
+      --         pycodestyle = { enabled = false },
+      --         autopep8 = { enabled = false },
+      --         yapf = { enabled = false },
+      --         mccabe = { enabled = false },
+      --         pylsp_mypy = { enabled = false },
+      --         pylsp_black = { enabled = false },
+      --         pylsp_isort = { enabled = false },
+      --       },
+      --     },
+      --   },
+      -- },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       tailwindcss = {},
       dockerls = {},
-      sqlls = {},
-      terraformls = {},
       jsonls = {},
-      yamlls = {},
+      -- yamlls = {},
 
       lua_ls = {
         -- cmd = {...},

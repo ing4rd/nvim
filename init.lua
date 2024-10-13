@@ -13,10 +13,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- For nvim-tree
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
 -- Set up plugins
 require('lazy').setup {
-  require 'plugins.neotree',
-  require 'plugins.colortheme',
+  require 'plugins.neo-tree',
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.treesitter',
@@ -25,10 +32,9 @@ require('lazy').setup {
   require 'plugins.autocompletion',
   require 'plugins.none-ls',
   require 'plugins.gitsigns',
-  require 'plugins.alpha',
-  require 'plugins.indent-blankline',
   require 'plugins.misc',
   require 'plugins.comment',
+  require 'plugins.theme',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
