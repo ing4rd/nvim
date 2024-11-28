@@ -8,6 +8,10 @@ return {
     'tpope/vim-fugitive',
   },
   {
+    -- surround words
+    'tpope/vim-surround',
+  },
+  {
     -- GitHub integration for vim-fugitive
     'tpope/vim-rhubarb',
   },

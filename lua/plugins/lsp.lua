@@ -163,13 +163,7 @@ return {
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       -- tsserver = {},
-      -- ruff = {
-      -- init_options = {
-      -- settings = {
-      -- Any extra CLI arguments for `ruff` go here.
-      -- args = {},
-      -- },
-      -- },
+      -- ruff = {},
       -- },
       -- pylsp = {
       --   settings = {
@@ -187,6 +181,7 @@ return {
       --     },
       --   },
       -- },
+      pyright = {},
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       tailwindcss = {},
