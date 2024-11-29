@@ -8,8 +8,13 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
--- save file
-vim.keymap.set('n', '<C-s>', '<cmd> w <CR>', opts)
+-- format and save file
+vim.keymap.set('n', '<C-s>', function()
+  -- Trigger formatting with a timeout of 1000ms before saving
+  vim.lsp.buf.format { timeout_ms = 1000 }
+  -- Save the file
+  vim.cmd 'write'
+end, opts)
 
 -- save file without auto-formatting
 vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
@@ -44,8 +49,6 @@ vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
 -- Buffers
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>x', ':bdelete!<CR>', opts) -- close buffer
 
 -- Window management

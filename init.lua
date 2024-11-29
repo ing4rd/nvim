@@ -23,19 +23,23 @@ vim.opt.termguicolors = true
 
 -- Set up plugins
 require('lazy').setup {
+  require 'plugins.obsidian',
   require 'plugins.neo-tree',
   require 'plugins.bufferline',
   require 'plugins.lualine',
   require 'plugins.treesitter',
   require 'plugins.telescope',
+  require 'plugins.harpoon',
   require 'plugins.lsp',
   require 'plugins.autocompletion',
   require 'plugins.none-ls',
-  require 'plugins.gitsigns',
+  require 'plugins.lazygit',
   require 'plugins.misc',
   require 'plugins.comment',
   require 'plugins.theme',
 }
 
+-- Alias
+vim.api.nvim_create_user_command('Git', 'LazyGit', {})
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
