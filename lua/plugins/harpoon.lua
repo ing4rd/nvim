@@ -14,11 +14,9 @@ return {
       vim.keymap.set('n', '<leader>M', function()
         harpoon:list():add()
       end)
-      vim.keymap.set('n', '<Tab>', function()
+      vim.keymap.set('n', '<leader><Tab>', function()
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end)
-      local harpoon = require 'harpoon'
-      harpoon:setup {}
 
       -- basic telescope configuration
       local conf = require('telescope.config').values
